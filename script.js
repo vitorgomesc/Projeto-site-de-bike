@@ -1,3 +1,21 @@
+// Menu hambúrguer
+const menuToggle = document.getElementById("menuToggle");
+const navMenu = document.getElementById("navMenu");
+
+// Abre ou fecha ao clicar no botão ☰
+menuToggle.addEventListener("click", (e) => {
+  e.stopPropagation(); // Impede que o clique feche o menu imediatamente
+  navMenu.classList.toggle("ativo");
+});
+
+// Fecha o menu ao clicar fora dele
+document.addEventListener("click", (e) => {
+  const clicouFora = !navMenu.contains(e.target) && e.target !== menuToggle;
+  if (clicouFora) {
+    navMenu.classList.remove("ativo");
+  }
+});
+
 
 // Lista de produ// Sempre rolar para o topo ao carregar a página
 document.addEventListener("DOMContentLoaded", () => {

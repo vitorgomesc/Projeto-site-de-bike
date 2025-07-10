@@ -7,44 +7,67 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fff;
+  background-color: ##f2f2f2;
   color: #333;
   line-height: 1.6;
 }
 
 /* HEADER */
+/* HEADER GERAL */
 header {
-  background: #000;
-  color: white;
-  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0.2rem 2rem;
+  background-color: #111;
+  color: ##f2f2f2;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
+/* BOTÃO HAMBÚRGUER */
+.menu-toggle {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1100;
 }
 
-nav a {
+/* MENU OCULTO */
+.nav {
+  position: absolute;
+  top: 18px;
+  right: 0%;
+  background-color: #111;
+  padding: 1rem 1.5rem;
+  border-radius: 2%;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.nav.ativo {
+  display: flex;
+}
+
+.nav a {
   color: white;
   text-decoration: none;
+  padding: 0.6rem 0;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #ff5c1b;
+.nav a:hover {
+  color: #9a9691;
 }
 
 /* FOOTER */
@@ -97,7 +120,7 @@ nav a:hover {
 }
 
 .acessorio span {
-  color: #ff5c1b;
+  color: #d57048;
   font-weight: bold;
   display: block;
   margin-top: 0.3rem;
@@ -127,7 +150,7 @@ nav a:hover {
 
 .seta-baixo {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
